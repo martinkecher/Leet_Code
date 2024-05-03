@@ -2,10 +2,10 @@ class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         idx = 0
         for ch in s:
-            if ch not in t[idx:]:
-                return False
-            else:
                 idx = t.find(ch, idx) + 1
+                if idx == 0:
+                    return False
+
         return True
 
 
