@@ -7,11 +7,6 @@ class Solution:
         left_idx: int = 0
         right_idx: int = len(height) - 1
 
-        # for left_idx in range(0, len(height) - 1):
-        #     for right_idx in range(left_idx + 1, len(height)):
-        #         area = min(height[left_idx], height[right_idx]) * (right_idx - left_idx)
-        #         max_area = area if area > max_area else max_area
-
         while right_idx > left_idx:
             area = min(height[right_idx], height[left_idx]) * (right_idx - left_idx)
             max_area = area if max_area < area else max_area
